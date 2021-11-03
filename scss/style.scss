@@ -1,0 +1,232 @@
+@import 'vars';
+@import 'reset';
+@import 'global';
+
+
+.header {
+    padding: 22px 0;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+
+        &-item {
+            color: #1F2E35;
+            font-weight: 400;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                color: $lightenBlack;
+            }
+
+            &+& {
+                margin-left: 50px;
+            }
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+
+        &-item-link {
+            cursor: pointer;
+
+            &+& {
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+.read {
+    padding-top: 80px;
+    padding-bottom: 150px;
+
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+
+    &__info {
+        max-width: 520px;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        @include font(48, 30);
+        font-weight: 700;
+        line-height: 64px;
+        color: #1F2E35;
+        line-height: 133.69%;
+        padding-bottom: 24px;
+
+        &-span {
+            color: $red;
+            line-height: 133.69%;
+        }
+    }
+
+    &__text {
+        line-height: 29px;
+        font-weight: 400;
+        padding-bottom: 26px;
+    }
+
+    &__wrapper-img {
+        padding-top: 30px;
+        max-width: 400;
+    }
+
+    &__btn {
+        font-weight: 400;
+        font-size: 20px;
+        padding: 12px 32px;
+    }
+}
+
+.welcome {
+    padding-top: 55px;
+    padding-bottom: 60px;
+    background-color: #F6F6F6;
+
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        @include font (32, 28);
+        font-weight: 500;
+    }
+
+    &__img-wrapper {
+        max-width: 460px;
+    }
+
+    &__info {
+        max-width: 530px;
+    }
+    &__title{
+        padding-bottom: 24px;
+    }
+    &__text {
+        @include font(18,16);
+        font-weight: 500;
+        line-height: 150%;
+        & + &{
+            margin-top: 38px;
+        }
+    }
+}
+.product{
+    padding-top: 120px;
+    padding-bottom: 140px;
+    .container{
+        text-align: center;
+
+    }
+    &__title{
+        @include font(32,28);
+        padding-bottom: 28px;
+    }
+    &__items{
+        display: flex;
+        max-width: 1130;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__item{
+        padding: 5px;
+        border-radius: 5%;
+        border: 4px solid rgba($red,.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 315px;
+        transition: .3s;
+        margin: 0 10px 20px;
+        &-title{
+            @include font(28,24);
+            padding: 15px 0;
+        }
+        &-text{
+            padding-bottom: 20px;
+        }
+        &:hover{
+            box-shadow: 0px 0px 4px 4px rgba($red,0.2);
+        }
+    }
+}
+.contact{
+    padding:30px 0;
+    .container{
+        display: flex;
+        justify-content: start;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__main-info{
+        margin-left: 20px;
+        &-title{
+            @include font(22,20);
+            padding-bottom: 15px;
+        }
+        &-text{
+            font-size: 18px;
+            line-height: 149.19%;
+        }
+        &-text:not(:last-child){
+            margin-top: 28px;
+        }
+    }
+    &__adress{
+        margin-left: 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: start;
+        flex-direction: column;
+        &-title{
+            padding-top: 30px;
+            @include font(22,20);
+            padding-bottom: 15px;
+        }
+        &-text{
+            font-size: 18px;
+            line-height: 149.19%;
+        }
+        &-link{
+            color:#316c8a;
+            transition: .3s;
+            &:hover{
+                color:lighten(#1f4457,20%);
+            }
+        }
+    }
+}
+.footer{
+    background-color: $red;
+    .container{
+        @include font(18,16);
+        color:white;
+        text-align: center;
+        padding: 22px 0;
+    }
+}
+@import 'media';

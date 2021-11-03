@@ -1,0 +1,63 @@
+html,
+body {
+	height: 100%;
+}
+body{
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 29px;
+	color:#30444E;
+	overflow-x: hidden;
+}
+
+h1,h2,h3,h4{line-height: 133.69%; font-weight: 500;}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.btn{
+	padding: 8px 16px;
+	background-color: $red;
+	border-radius: 3px;
+	text-decoration: none;
+	color:white;
+	transition: background-color .3s;
+	&:hover{
+		background-color:$lightenRed;
+	}
+}
+
+.icon {
+	font-family: "Anicons Regular", sans-serif;
+	font-variation-settings: "TIME" 1;
+	transition: font-variation-settings 0.4s ease;
+	cursor: pointer;
+	user-select: none;
+ }
+ .ia {
+	font-variation-settings: "TIME" 100;
+ }
+.hidden{
+	display:none;
+}
+.header__navigation-menu{
+	display: none;
+}
+.red{
+	color: $red;
+}

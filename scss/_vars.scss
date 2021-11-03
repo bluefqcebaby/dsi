@@ -1,0 +1,10 @@
+$maxWidth: 1920;
+$red: #EE4248;
+$black:#30444E;
+$lightenRed: lighten($red,8%);
+$lightenBlack: lighten($black,20%);
+@mixin font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
